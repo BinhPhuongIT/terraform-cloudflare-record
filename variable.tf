@@ -10,7 +10,7 @@ variable "type" {
 
 variable "record_config" {
   type = map(object({
-    value   = string
+    content   = string
     type    = optional(string)
     proxied = optional(bool)
   }))
