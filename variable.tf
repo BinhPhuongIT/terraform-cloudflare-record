@@ -13,7 +13,7 @@ variable "record_config" {
     content   = string
     proxied = optional(bool)
     type = optional(string)
-    3600 = optional(number)
+    ttl = optional(number)
   }))
   description = "Configuration for individual DNS records."
 }
