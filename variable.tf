@@ -11,8 +11,8 @@ variable "type" {
 variable "record_config" {
   type = map(object({
     content   = string
-    type    = optional(string)
     proxied = optional(bool)
+    type = optional(string)
   }))
   description = "Configuration for individual DNS records."
 }

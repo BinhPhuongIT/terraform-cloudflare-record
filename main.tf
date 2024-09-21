@@ -4,6 +4,6 @@ resource "cloudflare_record" "this" {
   zone_id = var.zone_id
   name    = each.key
   content   = each.value.content
-  type    = lookup(each.value, "type", var.type)
-  proxied = lookup(each.value, "proxied", false)
+  type    = coalesce(each.value.type, var.type)
+  proxied = coalesce(each.value.proxied, false)
 }
