@@ -6,4 +6,5 @@ resource "cloudflare_record" "this" {
   content   = each.value.content
   type    = coalesce(each.value.type, var.type)
   proxied = coalesce(each.value.proxied, false)
+  ttl     = coalesce(each.value.ttl, 3600)
 }
